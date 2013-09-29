@@ -1,0 +1,690 @@
+/* Google WebFonts */
+    @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700|Istok+Web:400,700|Mouse+Memoirs);
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  Fixes
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* IE MOBILE 10 device-width bootstrap bug fix (plus CSS) */
+    @-webkit-viewport   { width: device-width; }
+    @-moz-viewport      { width: device-width; }
+    @-ms-viewport       { width: device-width; }
+    @-o-viewport        { width: device-width; }
+    @viewport           { width: device-width; }
+
+/* Hack for older mobile browsers to avaible bootstrap 3.0 modal functionality */
+    body.no-overflow-scroll.modal-open {
+      overflow: visible;
+    }
+    body.no-overflow-scroll .modal {
+      position: absolute;
+      overflow: visible;
+      bottom: auto;
+    }
+
+/* Temporary fix for bootstrap's horizontal scroll bug
+ * https://github.com/twbs/bootstrap/issues/9862?source=cc
+ */
+    .row {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Fonts
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+    /*
+    @font-face {
+        font-family: 'TigerBalloon';
+        src: url('../fonts/TigerBalloon/TigerBalloon-Regular.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/TigerBalloon/TigerBalloon-Regular.woff') format('woff'),
+            url('../fonts/TigerBalloon/TigerBalloon-Regular.ttf')  format('truetype'),
+            url('../fonts/TigerBalloon/TigerBalloon-Regular.svg#svgFontName') format('svg');
+    }
+
+    @font-face {
+        font-family: 'JUNGLE';
+        src: url('../fonts/Jungle/JUNGLE.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/Jungle/JUNGLE.woff') format('woff'),
+            url('../fonts/Jungle/JUNGLE.ttf')  format('truetype'),
+            url('../fonts/Jungle/JUNGLE.svg#svgFontName') format('svg');
+    }
+
+    @font-face {
+        font-family: 'Punky';
+        src: url('../fonts/Punky/Punky.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/Punky/Punky.woff') format('woff'),
+            url('../fonts/Punky/Punky.ttf')  format('truetype'),
+            url('../fonts/Punky/Punky.svg#svgFontName') format('svg');
+    }
+    */
+
+    @font-face {
+        font-family: 'CMBloat';
+        src: url('../fonts/CMBloat/CMBloat.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/CMBloat/CMBloat.woff') format('woff'),
+            url('../fonts/CMBloat/CMBloat.ttf')  format('truetype'),
+            url('../fonts/CMBloat/CMBloat.svg#svgFontName') format('svg');
+    }
+
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  General styles
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    body, html {
+        height: 100%;
+    }
+
+    body {
+        background-color: #000;
+        padding-top: 7em;
+        font-size: 1.4em;
+        /*
+        font-family: 'Droid Sans', sans-serif;
+        font-family: 'PT Sans', sans-serif;
+        font-family: "Istok Web", "Verdana", sans-serif;
+        */
+        font-family: "Montserrat", "Verdana", sans-serif;
+    }
+
+    a, a:hover, a:visited, a:active, a:link {
+        text-decoration: none;
+    }
+
+
+    h1 {
+        font-weight: 400;
+        font-size: 3em;
+        padding: 0px;
+        margin: 0px;
+        font-family:  "CMBloat", "Comic Sans MS", sans-serif;
+        color: rgb(247, 123, 0);
+        text-shadow: 2px 2px rgba(30, 10, 0, 0.65);
+    }
+
+/* aside content */
+    #asideCanvas{
+        background-color: rgb(251, 245, 218);
+        background-color: rgba(251, 245, 218, 0.95);
+        padding: 0.2em;
+    }
+
+    #asideCanvas nav{
+        background: none;
+        border: none;
+        text-align: center;
+    }
+
+    #asideCanvas nav a {
+        display: inline-block;
+        min-width: 2em;
+        padding: 0px 0.1em 0px 0.1em;
+        font-size: 2.5em;
+        color: rgb(247, 123, 0);
+        color: rgba(251, 245, 218, 1);
+        text-shadow: 2px 2px rgba(30, 10, 0, 0.65), -1px -1px rgba(30, 10, 0, 25);
+    }
+
+    #asideCanvas nav a:hover {
+        color: rgb(178, 81, 39);
+    }
+
+    #asideCanvas nav a .active {
+        color: #f64313;
+    }
+
+    #asideContent #videoRoot {
+
+    }
+/* aside content END */
+
+
+/* main navigation navbar*/
+    .navbar .nav-pills li a {
+        font-family: "CMBloat", "Comic Sans MS", cursive, sans-serif;
+        font-size: 2.8em;
+        line-height: 0.8em;
+        color: #ff7b00;
+        color: orange;
+        text-shadow: 2px 2px 2px rgba(168, 94, 0, 1);
+        transition: color 300ms linear;
+        -webkit-transition: color 300ms linear;
+    }
+
+    .navbar .nav-pills li a:hover {
+        background: none;
+        color: #fcd88d;
+    }
+
+    .navbar .nav-pills li.active a {
+        background: #f64313;
+        color: #fcd88d;
+    }
+
+
+    .navbar .nav-pills .active > a {
+        border-radius: 30px;
+        background: #f64313;
+        filter: none;
+    }
+
+    .navbar .nav-pills li.active a:hover {
+        background: #f64313 !important;
+        filter: none;
+    }
+
+
+    #navbarTop {
+        border: none;
+        background-image: none;
+        border-radius: 4px;
+        filter: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        background-color: #bf3200;
+    }
+
+    #navbarTop .navbar-collapse {
+        border: none;
+    }
+/* main navigation navbar END */
+
+
+
+
+    #mainContent {
+        background-color: rgb(251, 245, 218);
+        background-color: rgba(251, 245, 218, 0.95);
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: inset -5px -5px 10px 5px rgba(0,0,0,0.1), 0px 0px 15px 5px rgba(255,255,255,0.6);
+    }
+
+
+
+
+    #footer {
+        position: static;
+        background-color: #000;
+        padding: 0.4em;
+        cursor: pointer;
+        box-shadow: inset -5px -5px 10px 5px rgba(0,0,0,0.1), 0px 0px 10px 3px rgba(255,255,255,0.6);
+    }
+
+    #footer h1 {
+        font-size: 1.5em;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: normal;
+        margin: 0.1em;
+        color: #c62d2d;
+        color: white;
+        text-shadow: 0px 2px 3px rgba(0,0,0,0.5);
+        -webkit-background-clip: text;
+           -moz-background-clip: text;
+                background-clip: text;
+    }
+
+    #footer h1 {
+        display: inline;
+    }
+
+    #footer h1:hover {
+        color: #c62d2d;
+    }
+
+
+
+/* login modal styles */
+    #loginModal .modal-content{
+        padding: 3em;
+        background-color: rgb(137,72,8);
+        background-color: rgba(137, 72, 8, 0.97);
+        box-shadow: inset -0.5em -0.5em 0.5em -0.2em rgba(50,0,0,0.6), 0.23em 0.2em 1em 0.5em rgba(60, 0, 0, 0.4);
+        border-radius: 100%;
+        color: #C9C9C9;
+        text-shadow: 2px 2px rgba(0,0,0,0.5);
+    }
+
+    /*
+    #loginModal h1 {
+        font-size: 5.2em;
+        text-align: center;
+        font-weight: bold;
+        font-family: "TigerBalloon", sans-serif;
+        color: brown;
+        color: rgb(200,100, 10);
+        text-shadow: 4px 4px rgba(30, 10. 0.6);
+    }
+    */
+
+    #loginModal h1 {
+        font-weight: 400;
+        font-family: "Montserrat", "Verdana",  sans-serif;
+        font-size:2.8em;
+        text-align: center;
+        font-family:  "CMBloat", "Comic Sans MS", sans-serif;
+        color: rgb(247, 123, 0);
+        text-shadow: 2px 2px rgba(30, 10, 0, 0.6);
+    }
+
+    #loginModal .modal-footer {
+        border: none;
+        margin-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    #loginModal .modal-header {
+        border-color: rgb(44,22,00);
+    }
+
+/* login modal END */
+
+
+
+/* tame content  */
+    #tameContent  .jumbotron{
+        background: none;
+        margin-top: -1em;
+        margin-bottom:  -1em;
+    }
+
+    #tameContent header h1 {
+        margin-top: -0.2em;
+        font-weight: 400;
+        font-family: "Montserrat", "Verdana",  sans-serif;
+        font-size: 2.8em;
+        font-family:  "CMBloat", "Comic Sans MS", sans-serif;
+        color: #cff;
+        color: rgb(247, 123, 0);
+        text-shadow: 2px 2px rgba(30, 10, 0, 0.6);
+    }
+
+    #tameContent header blockquote small {
+        font-size: 0.8em;
+    }
+
+    #tameLogo {
+        font-size: 1.6em;
+        position: absolute;
+        color:#fcfc0c;
+        margin-left: -1.6em;
+        margin-top: -1.8em;
+    }
+
+    #tameLogo i {
+        text-shadow: 2px 2px 3px black;
+    }
+/* tame content END */
+
+
+
+    .squareDiv {
+        display: inline-block;
+        margin: 0.5em;
+        border-radius: 0.5em;
+        width: 3em;
+        height: 3em;
+        background-color: #671569;
+        box-shadow: inset 2px 2px 4px 2px rgba(255,255,255,0.2), 2px 2px 4px 2px rgba(0,0,0,0.4);
+    }
+
+    .dummy{
+            background: url(?holder.js/360x240/industrial) no-repeat;
+        }
+
+
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  Smaller display styles
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+    @media (max-width: 767.9px) {
+
+        body{
+            font-family: "Istok Web", "Verdana", sans-serif;
+            /*
+            background-image: url("../img/logo/bckTiger400.jpg");
+            background-repeat: no-repeat;
+            background-position: center 5%;
+            */
+        }
+
+        #brandImg {
+            background-image: url("../img/logo/tigerLogo150x80v3.png");
+            background-repeat: no-repeat;
+            width: 150px;
+            height: 80px;
+            margin: -8px 43px -150px -5px;
+            position: absolute;
+            z-index: 1031; /* For displaying over the collapsible navbar content (navbar's z-index is 1030) */
+        }
+
+        #mainContent {
+            box-shadow: none;
+        }
+
+        #footer {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 0px;
+            margin-top: 5px;
+            box-shadow: none;
+            border-top: 1px solid #6b6b6b;
+        }
+
+        #footer section {
+            display: inline-block;
+            text-align: center;
+            width: 48%;
+        }
+
+
+        #footer .footerDivider{
+            display: inline-block;
+            width: 1px;
+            height: 1.4em;
+            margin-top: 0.5em;
+            box-shadow: none;
+            border: none;
+            background-color: #6b6b6b;
+        }
+
+        .navbar .nav-pills li a {
+            font-size: 1.4em;
+        }
+
+        #loginModal .modal-content {
+            padding: 0.5em;
+            margin: 10%;
+            border-radius: 2em;
+        }
+
+        #tameLogo {
+            font-size: 1.6em;
+            position: absolute;
+            color:#f36a18;
+            margin-left: -1.6em;
+            margin-top: -1.8em;
+            z-index: 3002;
+        }
+
+    }
+
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  Tablet specific styles
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    @media (min-width: 768px) and (max-width: 991.9px){
+
+        body{
+            /*
+            background-image: url("../img/logo/bckTiger800.jpg");
+            background-repeat: no-repeat;
+            background-position: center 10%;
+            */
+        }
+
+
+        #brandImg {
+            background-image: url("../img/logo/tigerLogo150x80v3.png");
+            background-repeat: no-repeat;
+            width: 150px;
+            height: 133px;
+            margin: -8px 25px -120px -5px;
+        }
+
+        #navbarTop ul li {
+            width: 150px;
+        }
+
+        #videoRoot {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        #footer section {
+            position: relative;
+            width: 49%;
+            float: left;
+            text-align: center;
+        }
+
+        #footer h1 {
+            width: 100%;
+            text-align: center;
+        }
+
+        #footer .footerDivider{
+            position: absolute;
+            left: 49%;
+            width: 0.5%;
+            height: 2em;
+            color: white;
+            border-radius: 0.2em;
+            box-shadow: inset -1px -1px white;
+        }
+
+        .navbar .nav-pills li a {
+            font-size: 2.0em;
+            line-height: 0.9em;
+            color: #ff7b00;
+            text-shadow: 2px 2px 2px rgba(168, 94, 0, 1);
+        }
+
+        #loginModal .modal-content {
+            padding: 0.5em;
+            margin: 10%;
+            border-radius: 2em;
+        }
+
+    }
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  Non-mobile styles
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    @media (min-width: 992px){
+
+        body{
+            background-image: url("../img/logo/bckTiger600.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: 0px 0px;
+        }
+
+        #brandImg {
+            background-image: url("../img/logo/tigerLogo250x133v3.png");
+            background-repeat: no-repeat;
+            width: 326px;
+            height: 173px;
+            margin: -15px 0px -150px -13px;
+        }
+
+        #navbarTop ul li {
+            width: 180px;
+        }
+
+        #videoRoot {
+            position: fixed;
+            bottom: 0;
+            right: 25px;
+            margin-left: 10px;
+        }
+
+        #asideCanvas {
+            position: fixed;
+            right: 25px;
+            border: 1px solid white;
+            margin-top: 2.7em;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: inset -5px -5px 10px 5px rgba(0,0,0,0.1), 0px 0px 15px 5px rgba(255,255,255,0.6);
+        }
+
+        #footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            margin-left: 5px;
+            margin-bottom: 5px;
+            border-radius: 1.5em;
+        }
+
+        #footer h1 {
+            padding: 0px;
+            margin: 0px;
+            font-size: 1em;
+        }
+
+        #footer section {
+            display: inline-block;
+            width: 4em;
+            float: left;
+            text-align: center;
+            margin: 0.2em;
+            padding: 0px;
+        }
+
+        #footer .footerDivider {
+            display: inline-block;
+            float: left;
+            width: 2px;
+            height: 18px;
+            margin-top: 3px;
+            color: white;
+            border-radius: 2px;
+            box-shadow: inset -1px -1px white;
+        }
+
+        #navbarTop {
+            font-size: 1em;
+            background-image: -webkit-gradient(linear,left 0,left 100%,from(#800000),to(#ff8000));
+            background-image: -webkit-linear-gradient(top,#800000,0%,#ff8000,100%);
+            background-image: -moz-linear-gradient(top,#800000 0,#ff8000 100%);
+            background-image: linear-gradient(to bottom,#800000 0,#ff8000 100%);
+            background-repeat: repeat-x;
+            -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,0.75), 112px 111px 5px 1px rgba(255,255,255,0.75);
+            box-shadow: inset 0px 1px 0px rgba(0,0,0,0.75), 0px 4px 6px 2px rgba(255,255,255,0.35);
+        }
+
+        .navbar .nav-pills li a {
+            font-size: 1.5em;
+        }
+
+        .navbar .nav-pills li.active a {
+            box-shadow: 2px 2px 4px 2px rgba(0,0,0, 0.2);
+        }
+
+        #mainContainer {
+            position: relative;
+            height: 100%;
+            margin-bottom: 100px;
+        }
+
+        #mainContent{
+            min-height: 85%;
+            margin-left: 25px;
+            margin-right: 390px;
+            margin-top: 35px;
+            padding-top: 55px;
+        }
+
+        #mainContent > section {
+            padding: 0.5em;
+        }
+
+        #loginModal .modal-header {
+            border: none;
+            margin-bottom: -1em;
+            padding-bottom: 0px;
+        }
+
+
+
+/* tame content */
+
+    #tameContent  .jumbotron{
+        background: none;
+        margin-top: -3.7em;
+        margin-bottom:  -1em;
+    }
+
+    #tameContent header h1 {
+        margin-top: -0.2em;
+    }
+/* tame content END */
+
+}
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  Big screen like styles
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    @media (min-width: 1300px) {
+
+        body{
+            background-image: url("../img/logo/bckTiger800.jpg");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: 10% 5%;
+        }
+
+        #navbarTop #mainNavBtns {
+            float: right;
+        }
+
+        #navbarTop ul li {
+            width: 180px;
+        }
+
+        .navbar .nav-pills li a {
+            font-size : 2.2em;
+        }
+
+        #tameContent  .jumbotron{
+            margin-top: -3.2em;
+        }
+
+        #tameContent header h1 {
+            font-size: 5em;
+            margin-top: -0.25em;
+        }
+/* aside content */
+
+    #asideCanvas nav a:hover {
+        color: rgb(178, 81, 39);
+    }
+
+    #asideCanvas nav a .active {
+        color: #f64313;
+    }
+/* aside content END */
+
+    }
